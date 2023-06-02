@@ -7,7 +7,7 @@ function start(){
 }
 function shareMessage(){
     Kakao.Share.sendScrap({
-        requestUrl: "https://shiny-licorice-4e9015.netlify.app"
+        requestUrl: "https://brilliant-puppy-663ff4.netlify.app"
     })
 }
 function next(){
