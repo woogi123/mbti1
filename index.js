@@ -5,19 +5,13 @@ function start(){
     $("#qna").show();
     next();
 }
-
+function shareMessage(){
+    Kakao.Share.sendScrap({
+        requestUrl: "https://shiny-licorice-4e9015.netlify.app"
+    })
+}
 function next(){
-    //버튼 클릭 시 점수 계산
-    $("#A").click(function(){
-        var type = $("#type").val();
-        var preValue = $("#" + type).val();
-        $("#" + type).val(parseInt(preValue) + 1);
-        next();
-    });
-    $("#B").click(function(){
-        next();
-    });
-
+    
     if(num==13){
         $("#qna").hide();
         $("#result").show();
@@ -41,6 +35,16 @@ function next(){
         num++;
     }
 }
+//버튼 클릭 시 점수 계산
+$("#A").click(function(){
+    var type = $("#type").val();
+    var preValue = $("#" + type).val();
+    $("#" + type).val(parseInt(preValue) + 1);
+    next();
+});
+$("#B").click(function(){
+    next();
+});
 
 
 
