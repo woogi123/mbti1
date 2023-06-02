@@ -5,11 +5,7 @@ function start(){
     $("#qna").show();
     next();
 }
-function shareMessage(){
-    Kakao.Share.sendScrap({
-        requestUrl: "https://brilliant-puppy-663ff4.netlify.app"
-    })
-}
+
 function next(){
     
     if(num==13){
@@ -62,4 +58,9 @@ function shareURL(){
     });
 
     document.body.removeChild(dummy);
+}
+function shareMessage(){
+    Kakao.Share.sendScrap({
+        requestUrl: "https://brilliant-puppy-663ff4.netlify.app"
+    })
 }
